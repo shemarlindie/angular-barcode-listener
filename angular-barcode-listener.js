@@ -112,7 +112,7 @@ exports.default = {
         isScanning = true;
         setTimeout(finishScan, scanDuration);
       }
-      if (scannedPrefix === barcodePrefix && /[^\s]/.test(char)) {
+      if (scannedPrefix === barcodePrefix) {
         codeBuffer += char;
       } else if (scannedPrefix === expectedPrefix && char === barcodePrefix.charAt(charIndex)) {
         scannedPrefix += char;
