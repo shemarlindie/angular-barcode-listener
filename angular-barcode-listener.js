@@ -98,6 +98,8 @@ exports.default = {
     var scannedPrefix = '';
     var finishScan = function finishScan() {
       if (codeBuffer) {
+        codeBuffer = codeBuffer.trim();
+        
         if (!barcodeLength) scanHandler(codeBuffer);else if (codeBuffer.length >= barcodeLength) scanHandler(codeBuffer.substr(0, barcodeLength));
       }
       scannedPrefix = '';
